@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <title>画像をバイナリ化</title>
+    <!-- Bootstrap読み込み -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="col-md-12">
+                <h1 class="mytitle">画像をバイナリ化</h1>
+                <p>作った人 : 谷川いち</p>
+            </div>
+            <div class="col-md-12">
+                <p>画像のバイナリデータを眺めたいときに使ってください。<br>ボタンを押すと、画像の各ピクセルを 0 から 255 の間の整数データに変換し、R,G,B,A の繰り返しで収めた.txtファイルを生成します。<br>ちなみに、javascriptのcanvasのgetImageDataを用いています。</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="flexbox flex0">
+        <input type="file" id="file">
+    </div>
+    <div class="flexbox flex1">
+        <canvas id="canvas" style="height:100%; margin: auto;"></canvas>
+    </div>
+    <img id="targetimg" src="choosefile.png" style="display:none;">
+
+    <div class="flexbox flex2">
+        <button type="button" class="btn btn-primary btn-lg">
+            <a href=""  id="download">データをダウンロード</a>
+        </button>
+    </div>
+    <div class="container">
+        <div class="col-md-12">
+            <p>(画像サイズによっては、処理に非常に時間がかかります。1,000×2,000px の画像でも、データ数は12,000,000に及ぶので…ご了承ください。)</p>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    作った人：谷川いち<br> 公開の日付：2019/11/9<br> バージョン：1.0 <br> 連絡先(Twitter): <a href="https://mobile.twitter.com/DmeD3KuYeK5orxK">こちら</a>
+                </div>
+                <div class="col-md-6">
+                    <a href="https://tanikawa1.site"><img src="blogbutton.png" id="banner" class="img-fluid"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
