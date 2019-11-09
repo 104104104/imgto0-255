@@ -27,11 +27,11 @@ abutton.onclick = function() {
     } else {
         document.getElementById("download").href = window.URL.createObjectURL(blob);
     }
-    console.log("Bainary Finish!");
 }
 
 let imageOnDoc = document.getElementById("targetimg");
-draw(canvas, imageOnDoc, ctx);
+imageOnDoc.addEventListener("load", draw(canvas, imageOnDoc, ctx));
+//draw(canvas, imageOnDoc, ctx);
 
 
 //以下、MyPicARからの移植
